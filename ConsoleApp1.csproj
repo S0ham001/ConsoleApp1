@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bhumi_maam.cs" />
+    <Compile Include="Bhoomi_maam.cs" />
     <Compile Include="nirav_sir.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tanna_sir.cs" />
