@@ -73,6 +73,8 @@ namespace ConsoleApp1
                 }
                 Console.Write("\n");
 
+
+
             }
 
         }
