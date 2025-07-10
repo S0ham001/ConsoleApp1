@@ -47,7 +47,19 @@ namespace ConsoleApp1
 
 
 
+            //T1.21
 
+            //Console.Write("Enter a number: ");
+            //int num = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter a number: ");
+            //int j = Convert.ToInt32(Console.ReadLine());
+            //int sum = 0;
+            //for (int i = 1; i <= num; i++)
+            //{
+            //    sum = sum + j;
+            //    j = j * 10;
+            //    Console.Write(sum+" + ");
+            //}
 
 
 
