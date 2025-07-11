@@ -47,6 +47,10 @@ namespace ConsoleApp1
 
 
 
+            
+
+
+             
             //T1.21
 
             //Console.Write("Enter a number: ");

@@ -109,56 +109,56 @@ namespace ConsoleApp1
             //}
             //Console.WriteLine(x);
 
-            //int[] arr5 = new int[5];
-            //Console.WriteLine("enter array elements:");
-            //for (int i = 0; i < arr5.Length; i++)
-            //{
-            //    arr5[i] = Int32.Parse(Console.ReadLine());
-            //}
-
-            //for (int i = 0;i < arr5.Length; i++)
-            //{
-            //    for (int j = i + 1; j < arr5.Length; j++)
-            //    {
-            //        if (arr5[i] > arr5[j])
-            //        {
-            //            int temp = arr5[i];
-            //            arr5[i] = arr5[j];
-            //            arr5[j] = temp;
-            //        }
-            //    }
-            //}
-            //Console.WriteLine("printing sorted array");
-            //foreach (int var in arr5)
-            //{
-            //    Console.WriteLine(var);
-            //}
-
-            bool[] freq = new bool[6];
-            int[] arr6 = new int[6];
+            int[] arr5 = new int[5];
             Console.WriteLine("enter array elements:");
-            for (int i = 0; i < arr6.Length; i++)
+            for (int i = 0; i < arr5.Length; i++)
             {
-                arr6[i] = Int32.Parse(Console.ReadLine());
+                arr5[i] = Int32.Parse(Console.ReadLine());
             }
 
-            for (int i = 0;i < arr6.Length; i++)
+            for (int i = 0; i < arr5.Length; i++)
             {
-                if (freq[i] == true)
-                     continue;
-
-                    int cnt = 1;
-                    for(int j = i+1; j<arr6.Length; j++)
+                for (int j = i + 1; j < arr5.Length; j++)
+                {
+                    if (arr5[i] > arr5[j])
                     {
-                        if (arr6[j] == arr6[i])
-                        {
-                            freq[j] = true;
-                            cnt++;
-                        }
+                        int temp = arr5[i];
+                        arr5[i] = arr5[j];
+                        arr5[j] = temp;
                     }
-                    Console.WriteLine("frequency of {0} is {1} times", arr6[i], cnt);
-                
+                }
             }
+            Console.WriteLine("printing sorted array");
+            foreach (int var in arr5)
+            {
+                Console.WriteLine(var);
+            }
+
+            //bool[] freq = new bool[6];
+            //int[] arr6 = new int[6];
+            //Console.WriteLine("enter array elements:");
+            //for (int i = 0; i < arr6.Length; i++)
+            //{
+            //    arr6[i] = Int32.Parse(Console.ReadLine());
+            //}
+
+            //for (int i = 0;i < arr6.Length; i++)
+            //{
+            //    if (freq[i] == true)
+            //         continue;
+
+            //        int cnt = 1;
+            //        for(int j = i+1; j<arr6.Length; j++)
+            //        {
+            //            if (arr6[j] == arr6[i])
+            //            {
+            //                freq[j] = true;
+            //                cnt++;
+            //            }
+            //        }
+            //        Console.WriteLine("frequency of {0} is {1} times", arr6[i], cnt);
+
+            //}
 
 
 
