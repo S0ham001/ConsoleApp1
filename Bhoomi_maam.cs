@@ -106,13 +106,13 @@ namespace ConsoleApp1
             //Console.WriteLine(" total => " + total);
 
 
-            //Tanna sir (majak)
+            //Tanna sir(majak)
             //Console.Write("enter a digit: ");
             //int num = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine(num + " " + num + " " + num);
             //for (int i = 1; i <= num; i++)
             //{
-            //    Console.WriteLine(num + " "+ i + " " + num);
+            //    Console.WriteLine(num + " " + i + " " + num);
             //}
 
 
@@ -122,47 +122,59 @@ namespace ConsoleApp1
             //*#*
             //#*#*
 
-            Console.Write("enter a number of row: ");
-            int row = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("enter a number of row: ");
+            //int row = Convert.ToInt32(Console.ReadLine());
 
-            for(int i = 0; i <= row; i++)
+            //for (int i = 0; i <= row; i++)
+            //{
+            //    if (i % 2 == 1)
+            //    {
+            //        for (int j = 0; j < i; j++)
+            //        {
+            //            if (j % 2 == 0)
+            //            {
+            //                Console.Write("*");
+            //            }
+            //            if (j % 2 == 1)
+            //            {
+            //                Console.Write("#");
+            //            }
+            //        }
+            //        Console.WriteLine();
+            //    }
+            //    else
+            //    {
+            //        for (int j = 0; j < i; j++)
+            //        {
+            //            if (j % 2 == 0)
+            //            {
+            //                Console.Write("#");
+            //            }
+            //            if (j % 2 == 1)
+            //            {
+            //                Console.Write("*");
+            //            }
+            //        }
+            //        Console.WriteLine();
+            //    }
+            //}
+
+
+            //array built in functions
+            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            Console.WriteLine("Array Length: " + a.Length);
+            Console.WriteLine("Array Max: " + a.Max());
+            Console.WriteLine("Array Min: " + a.Min());
+            Console.WriteLine("Array Sum: " + a.Sum());
+            Console.WriteLine("Array Average: " + a.Average());
+            Console.WriteLine("Array Reverse: " + string.Join(", ", a.Reverse()));
+            a.Append(11);
+            foreach (var item in a)
             {
-                if (i%2 == 1)
-                {
-                    for (int j = 0; j < i; j++)
-                    {
-                        if (j%2 == 0)
-                        {
-                            Console.Write("*");
-                        }
-                        if(j%2 == 1)
-                        {
-                            Console.Write("#");
-                        }
-                    }
-                    Console.WriteLine();
-                }
-                else
-                {
-                    for (int j = 0;j < i; j++)
-                    {
-                        if (j % 2 == 0)
-                        {
-                            Console.Write("#");
-                        }
-                        if (j%2 == 1)
-                        {
-                            Console.Write("*");
-                        }
-                        }
-                    Console.WriteLine();
-                }
+                Console.Write(item + ", ");
             }
 
-
-
-
-
+            
 
 
 
