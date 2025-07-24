@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bhoomi_maam.cs" />
+    <Compile Include="cal.cs" />
     <Compile Include="nirav_sir.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tanna_sir.cs" />

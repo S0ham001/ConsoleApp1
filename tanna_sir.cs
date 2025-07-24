@@ -82,6 +82,26 @@ namespace ConsoleApp1
             //
             //
 
+            //int addition(int a , int b)
+            //{
+            //    int ans;
+            //    ans = a + b;
+            //    return ans;
+            //}
+
+            //int add = addition(10, 20);
+            //Console.WriteLine(add);
+
+            //int substraction(int a, int b)
+            //{
+            //    int ans;
+            //    ans = a - b;
+            //    return ans;
+            //}
+
+            //int sub = substraction(10, 20);
+            //Console.WriteLine(sub);
+
 
 
         }
