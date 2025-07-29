@@ -3,11 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    public class Emoloyee
+    {
+        int empId;
+        string ename;
+        int salary;
+        public void getData(int empId, string ename, int salary)
+        {
+            this.empId = empId;
+            this.ename = ename;
+            this.salary = salary;
+        }
+        public void showDate()
+        {
+            Console.WriteLine("empId = " + empId);
+            Console.WriteLine("name = " + ename);
+            Console.WriteLine("salaey = " + salary);
+            Console.WriteLine();
+
+        }
+        public int getsalary()
+        {
+            return salary;
+
+        }
+    }
+    public class Time
+    {
+        int hour;
+        int min;
+        int sec;
+        public void getTime(int hour, int min, int sec)
+        {
+            this.hour = hour;
+            this.min = min;
+            this.sec = sec;
+        }
+        public void showTime()
+        {
+            Console.WriteLine("time is: " + hour + ":" + min + ":" + sec);
+        }
+    }
+
+
     internal class nirav_sir
     {
         static void Main(string[] args)
@@ -260,16 +304,34 @@ namespace ConsoleApp1
             //    Console.WriteLine(" ");
             //}
 
-            Console.WriteLine("commandline args:");
+            //Console.WriteLine("commandline args:");
             //Console.WriteLine("first line: " + args[0]);
             //Console.WriteLine("second line: " + args[1]);
 
-            foreach (var arg in args)
-            {
-                Console.WriteLine($"{arg}");
-            }
+            //foreach (var arg in args)
+            //{
+            //    Console.WriteLine($"{arg}");
+            //}
 
+            //Emoloyee emp1 = new Emoloyee();
+            //emp1.getData(1,"jhonny",10000);
+            ////emp.showDate();
+            //Emoloyee emp2 = new Emoloyee();
+            //emp2.getData(2, "silver", 7500);
+            ////emp.showDate();
 
+            //if (emp1.getsalary() > emp2.getsalary())
+            //{
+            //    emp1.showDate();
+            //}
+            //else
+            //{
+            //    emp2.showDate();
+            //}
+
+            Time t1 = new Time();
+            t1.getTime(11, 30, 45);
+            t1.showTime();
             Console.Read();
         }
     }
