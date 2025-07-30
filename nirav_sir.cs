@@ -49,6 +49,24 @@ namespace ConsoleApp1
         {
             Console.WriteLine("time is: " + hour + ":" + min + ":" + sec);
         }
+        public void nextsec()
+        {
+            sec++;
+            if (sec == 60)
+            {
+                sec = 0;
+                min++;
+                if (min == 60)
+                {
+                    min = 0;
+                    hour++;
+                    if (hour == 24)
+                    {
+                        hour = 0;
+                    }
+                }
+            }
+        }
     }
 
 
@@ -331,7 +349,13 @@ namespace ConsoleApp1
 
             Time t1 = new Time();
             t1.getTime(11, 30, 45);
+            t1.nextsec();
             t1.showTime();
+
+            Time t2 = new Time();
+            t2.getTime(12, 44, 59);
+            t2.nextsec();
+            t2.showTime();
             Console.Read();
         }
     }
