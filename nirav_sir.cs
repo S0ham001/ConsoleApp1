@@ -34,21 +34,56 @@ namespace ConsoleApp1
 
         }
     }
+    public class MethodOverLoading
+    {
+        public int sum(int x, int y)
+        {
+            return x + y;
+        }
+        public int sum(int x, int y, int z)
+        {
+            return x + y + z;
+        }
+        public string sum(string x)
+        {
+            return "hellow! " + x;
+        }
+    }
+
+    /// <summary>
+    /// time class
+    /// </summary>
     public class Time
     {
+        /// <summary>
+        /// this are the data members for time
+        /// </summary>
         int hour;
         int min;
         int sec;
+
+        /// <summary>
+        /// this methos is used to show time  getTime(houes,minutes,seconds)
+        /// </summary>
+        /// <param name="hour">1st value is for hours</param>
+        /// <param name="min">2nd value is for minutes</param>
+        /// <param name="sec">3td value is for seconds</param>
         public void getTime(int hour, int min, int sec)
         {
             this.hour = hour;
             this.min = min;
             this.sec = sec;
         }
+        /// <summary>
+        /// this methos is used to show time which is added in getTime() method
+        /// </summary>
         public void showTime()
         {
             Console.WriteLine("time is: " + hour + ":" + min + ":" + sec);
         }
+        /// <summary>
+        /// this method is used to increase one second in the time which is set using getTime() method
+        /// </summary>
         public void nextsec()
         {
             sec++;
@@ -353,9 +388,46 @@ namespace ConsoleApp1
             t1.showTime();
 
             Time t2 = new Time();
-            t2.getTime(12, 44, 59);
+            t2.getTime(12, 59, 59);
             t2.nextsec();
             t2.showTime();
+
+            Time t3 = new Time();
+            t3.getTime(11, 2, 4);
+            t3.nextsec();
+            t3.showTime();
+
+
+            //MethodOverLoading m1 = new MethodOverLoading();
+            //int t1 = m1.sum(1, 3);
+            //int t2 = m1.sum(1, 2, 3);
+            //string t3 = m1.sum("RIVEN");
+            //Console.WriteLine(t1);
+            //Console.WriteLine(t2);
+            //Console.WriteLine(t3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Console.Read();
         }
     }

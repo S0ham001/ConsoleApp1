@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,24 @@ namespace ConsoleApp1
 {
     internal class tanna_sir
     {
+        public class Employee
+        {
+            int empId;
+            string name;
+            string city;
+
+            public Emoloyee() { }
+            public Emoloyee(int empId, string name)
+            {
+                this.empId = empId;
+                this.name = name;
+            }
+            public Emoloyee(int empId, string name, string city) : this.(empId, name)
+            {
+                this.city = city;
+            }    
+}
+            
         public static void Main(string[] args)
         {
             //Console.WriteLine("1.");
@@ -103,6 +122,7 @@ namespace ConsoleApp1
             //Console.WriteLine(sub);
 
 
+            
 
         }
     }
