@@ -2,7 +2,7 @@
 
 
 
-C# is called an object-oriented programming (OOP) language because it follows the four main principles of OOP:
+### C# is called an object-oriented programming (OOP) language because it follows the four main principles of OOP:
 
 
 
@@ -86,7 +86,7 @@ object: instance of a class
 
 ==========================================================================================================================================
 
-1\. Encapsulation : binding data and logic into methods, data hiding 
+**1. Encapsulation :** binding data and logic into methods, data hiding 
 
 &nbsp;	members => not accessible from outside 
 
@@ -94,13 +94,13 @@ object: instance of a class
 
 ==========================================================================================================================================
 
-2\. Abstraction : hiding complexity and showing only needed
+**2. Abstraction :** hiding complexity and showing only needed
 
 &nbsp;	abstract keyword, interface 
 
 ==========================================================================================================================================
 
-3\. Inheritance : inherits one class to acquire the members and methods of that class
+**3. Inheritance :** inherits one class to acquire the members and methods of that class
 
 &nbsp;	-single
 
@@ -116,7 +116,7 @@ object: instance of a class
 
 
 
-4\. Polymorphism : same method can behave different according to objects
+**4. Polymorphism :** same method can behave different according to objects
 
 
 

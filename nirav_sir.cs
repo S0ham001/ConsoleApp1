@@ -1,108 +1,199 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
 using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Emoloyee
-    {
-        int empId;
-        string ename;
-        int salary;
-        public void getData(int empId, string ename, int salary)
-        {
-            this.empId = empId;
-            this.ename = ename;
-            this.salary = salary;
-        }
-        public void showDate()
-        {
-            Console.WriteLine("empId = " + empId);
-            Console.WriteLine("name = " + ename);
-            Console.WriteLine("salaey = " + salary);
-            Console.WriteLine();
+    //public class Emoloyee
+    //{
+    //    int empId;
+    //    string ename;
+    //    int salary;
+    //    public void getData(int empId, string ename, int salary)
+    //    {
+    //        this.empId = empId;
+    //        this.ename = ename;
+    //        this.salary = salary;
+    //    }
+    //    public void showDate()
+    //    {
+    //        Console.WriteLine("empId = " + empId);
+    //        Console.WriteLine("name = " + ename);
+    //        Console.WriteLine("salaey = " + salary);
+    //        Console.WriteLine();
 
-        }
-        public int getsalary()
-        {
-            return salary;
+    //    }
+    //    public int getsalary()
+    //    {
+    //        return salary;
 
-        }
-    }
-    public class MethodOverLoading
-    {
-        public int sum(int x, int y)
-        {
-            return x + y;
-        }
-        public int sum(int x, int y, int z)
-        {
-            return x + y + z;
-        }
-        public string sum(string x)
-        {
-            return "hellow! " + x;
-        }
-    }
+    //    }
+    //}
+    //public class MethodOverLoading
+    //{
+    //    public int sum(int x, int y)
+    //    {
+    //        return x + y;
+    //    }
+    //    public int sum(int x, int y, int z)
+    //    {
+    //        return x + y + z;
+    //    }
+    //    public string sum(string x)
+    //    {
+    //        return "hellow! " + x;
+    //    }
+    //}
 
     /// <summary>
     /// time class
     /// </summary>
-    public class Time
-    {
-        /// <summary>
-        /// this are the data members for time
-        /// </summary>
-        int hour;
-        int min;
-        int sec;
+    //public class Time
+    //{
+    //    /// <summary>
+    //    /// this are the data members for time
+    //    /// </summary>
+    //    int hour;
+    //    int min;
+    //    int sec;
 
-        /// <summary>
-        /// this methos is used to show time  getTime(houes,minutes,seconds)
-        /// </summary>
-        /// <param name="hour">1st value is for hours</param>
-        /// <param name="min">2nd value is for minutes</param>
-        /// <param name="sec">3td value is for seconds</param>
-        public void getTime(int hour, int min, int sec)
+    //    /// <summary>
+    //    /// this methos is used to show time  getTime(houes,minutes,seconds)
+    //    /// </summary>
+    //    /// <param name="hour">1st value is for hours</param>
+    //    /// <param name="min">2nd value is for minutes</param>
+    //    /// <param name="sec">3td value is for seconds</param>
+    //    public void getTime(int hour, int min, int sec)
+    //    {
+    //        this.hour = hour;
+    //        this.min = min;
+    //        this.sec = sec;
+    //    }
+    //    /// <summary>
+    //    /// this methos is used to show time which is added in getTime() method
+    //    /// </summary>
+    //    public void showTime()
+    //    {
+    //        Console.WriteLine("time is: " + hour + ":" + min + ":" + sec);
+    //    }
+    //    /// <summary>
+    //    /// this method is used to increase one second in the time which is set using getTime() method
+    //    /// </summary>
+    //    public void nextsec()
+    //    {
+    //        sec++;
+    //        if (sec == 60)
+    //        {
+    //            sec = 0;
+    //            min++;
+    //            if (min == 60)
+    //            {
+    //                min = 0;
+    //                hour++;
+    //                if (hour == 24)
+    //                {
+    //                    hour = 0;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
+    //public class Students
+    //{
+    //    int roll;
+    //    string name;
+    //    public Students()
+    //    {
+    //        Console.WriteLine("default constructor");
+    //        Console.Write("enter a roll number : ");
+    //        roll = Convert.ToInt32(Console.ReadLine());
+    //        Console.Write("enter a name : ");
+    //        name = Console.ReadLine();
+    //        Console.WriteLine("=======================================================================================================================");
+    //    }
+    //    public Students(int r, string n)
+    //    {
+    //        Console.WriteLine("parameterized constructor");
+    //        this.roll = r;
+    //        this.name = n;
+    //    }
+    //    public void showData()
+    //    {
+    //        Console.WriteLine("name is : " + name);
+    //        Console.WriteLine("roll number : " + roll);
+    //    }
+    //    static Students()
+    //    {
+    //        Console.WriteLine("static constructor");
+    //    }
+    //    public Students(Students s)
+    //    {
+    //        Console.WriteLine("copy constructor");
+    //        roll = s.roll;
+    //        name = s.name;
+    //    }
+    //}
+
+
+    //public class Books
+    //{
+    //    int bookId;
+    //    string bookName;
+    //    string bookAuthor;
+    //    int bookPrice;
+
+    //    public Books()
+    //    {
+    //        Console.Write("enter book ID          : ");
+    //        bookId = Convert.ToInt32(Console.ReadLine());
+    //        Console.Write("enter book Name        : ");
+    //        bookName = Console.ReadLine();
+    //        Console.Write("enter book Author name : ");
+    //        bookAuthor = Console.ReadLine();
+    //        Console.Write("enter book Price       : ");
+    //        bookPrice = Convert.ToInt32(Console.ReadLine());
+    //    }
+    //    public void showBooks()
+    //    {
+    //        Console.WriteLine("book ID          : " + bookId);
+    //        Console.WriteLine("book Name        : " + bookName);
+    //        Console.WriteLine("book Author name : " + bookAuthor);
+    //        Console.WriteLine("book Price       : " + bookPrice);
+
+    //    }
+    //}
+
+    public class Employees
+    {
+        private int empId;
+        private string empName;
+        private int empSalary;
+
+        public Employees(int id, string name, int salary)
         {
-            this.hour = hour;
-            this.min = min;
-            this.sec = sec;
+            empId = id;
+            empName = name;
+            empSalary = salary;
         }
-        /// <summary>
-        /// this methos is used to show time which is added in getTime() method
-        /// </summary>
-        public void showTime()
+        public void ShowEmployeeDetails()
         {
-            Console.WriteLine("time is: " + hour + ":" + min + ":" + sec);
+            Console.WriteLine($"Employee ID: {empId}");
+            Console.WriteLine($"Employee Name: {empName}");
+            Console.WriteLine($"Employee Salary: {empSalary}");
         }
-        /// <summary>
-        /// this method is used to increase one second in the time which is set using getTime() method
-        /// </summary>
-        public void nextsec()
-        {
-            sec++;
-            if (sec == 60)
-            {
-                sec = 0;
-                min++;
-                if (min == 60)
-                {
-                    min = 0;
-                    hour++;
-                    if (hour == 24)
-                    {
-                        hour = 0;
-                    }
-                }
-            }
-        }
+
     }
+
+
 
 
     internal class nirav_sir
@@ -382,20 +473,20 @@ namespace ConsoleApp1
             //    emp2.showDate();
             //}
 
-            Time t1 = new Time();
-            t1.getTime(11, 30, 45);
-            t1.nextsec();
-            t1.showTime();
+            //Time t1 = new Time();
+            //t1.getTime(11, 30, 45);
+            //t1.nextsec();
+            //t1.showTime();
 
-            Time t2 = new Time();
-            t2.getTime(12, 59, 59);
-            t2.nextsec();
-            t2.showTime();
+            //Time t2 = new Time();
+            //t2.getTime(12, 59, 59);
+            //t2.nextsec();
+            //t2.showTime();
 
-            Time t3 = new Time();
-            t3.getTime(11, 2, 4);
-            t3.nextsec();
-            t3.showTime();
+            //Time t3 = new Time();
+            //t3.getTime(11, 2, 4);
+            //t3.nextsec();
+            //t3.showTime();
 
 
             //MethodOverLoading m1 = new MethodOverLoading();
@@ -406,17 +497,56 @@ namespace ConsoleApp1
             //Console.WriteLine(t2);
             //Console.WriteLine(t3);
 
+            //int x = 2;
+            //string y = "test";
+
+            //Students s1 = new Students();
+            //s1.showData();
+            //Console.WriteLine();
 
 
+            //Students s2 = new Students(1,"majak");
+            //s2.showData();
+            //Console.WriteLine();
 
 
+            //Students s3 = new Students(x, y);
+            //s3.showData();
+            //Console.WriteLine();
+
+            //Students s4 = new Students(s3);
+
+            //Students []s = new Students[2]; 
+
+            //for (int i = 0; i < s.Length; i++)
+            //{
+            //    s[i] = new Students();
+            //    Console.WriteLine();
+            //}
+            //for (int i = 0;i < s.Length; i++)
+            //{
+            //    s[i].showData();
+            //}
+
+            //Books[] s = new Books[5];
+
+            //for (int i = 0; i < s.Length; i++)
+            //{
+            //    s[i] = new Books();
+            //    Console.WriteLine();
+            //}
+            //for (int i = 0; i < s.Length; i++)
+            //{
+            //    s[i].showBooks();
+            //}
 
 
+            int eid = Convert.ToInt32(args[0]);
+            string ename = args[1];
+            int esalary = Convert.ToInt32(args[2]);
 
-
-
-
-
+            Employees emp = new Employees(eid, ename, esalary);
+            emp.ShowEmployeeDetails();
 
 
 
