@@ -9,23 +9,7 @@ namespace ConsoleApp1
 {
     internal class tanna_sir
     {
-        public class Employee
-        {
-            int empId;
-            string name;
-            string city;
 
-            public Emoloyee() { }
-            public Emoloyee(int empId, string name)
-            {
-                this.empId = empId;
-                this.name = name;
-            }
-            public Emoloyee(int empId, string name, string city) : this.(empId, name)
-            {
-                this.city = city;
-            }    
-}
             
         public static void Main(string[] args)
         {

@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApp1
 {
@@ -178,11 +179,16 @@ namespace ConsoleApp1
         private string empName;
         private int empSalary;
 
-        public Employees(int id, string name, int salary)
+        public Employees()
+        {
+
+        }
+        public void getempdata(int id, string name, int salary)
         {
             empId = id;
             empName = name;
             empSalary = salary;
+
         }
         public void ShowEmployeeDetails()
         {
@@ -545,7 +551,8 @@ namespace ConsoleApp1
             string ename = args[1];
             int esalary = Convert.ToInt32(args[2]);
 
-            Employees emp = new Employees(eid, ename, esalary);
+            Employees emp = new Employees();
+            emp.getempdata(eid, ename, esalary);
             emp.ShowEmployeeDetails();
 
 
