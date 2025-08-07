@@ -76,6 +76,11 @@ namespace ConsoleApplication
             {
 
 
+                int pcd = Convert.ToInt32(args[0]);
+
+                String pnm = args[1];
+
+                String mnm = args[2];
 
                 Product p = new Product(pcd, pnm, mnm);
 
@@ -83,11 +88,6 @@ namespace ConsoleApplication
 
                 Console.Read();
 
-                int pcd = Convert.ToInt32(args[0]);
-
-                String pnm = args[1];
-
-                String mnm = args[2];
 
 
 
