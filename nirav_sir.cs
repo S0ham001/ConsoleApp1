@@ -24,7 +24,7 @@ namespace ConsoleApp1
     //        this.ename = ename;
     //        this.salary = salary;
     //    }
-    //    public void showDate()
+    //    public void showDate() 
     //    {
     //        Console.WriteLine("empId = " + empId);
     //        Console.WriteLine("name = " + ename);
@@ -33,7 +33,7 @@ namespace ConsoleApp1
 
     //    }
     //    public int getsalary()
-    //    {
+    //    { 
     //        return salary;
 
     //    }

@@ -4,13 +4,53 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApp1
 {
     internal class tanna_sir
     {
+        class A
+        {
+            private string fname;
 
-            
+            public string getFname() { return fname; }
+            public void setFname(string name) { this.fname = name; }
+
+            public string FirstName
+            {
+                get {
+                    
+                    return fname; }
+                set { fname = value; }
+            }
+        }
+        class Students
+        {
+            private string enrollno;
+            private string name;
+            public string getname() { return name; }
+            public void setFname(string name) { this.name = name; }
+
+            public string getenrolno() { return enrollno; }
+            public void setenrollno(string num) { this.enrollno = num; }
+
+            public string GetName
+            {
+                get { return name; }
+                set { name = value; }
+            }
+            public string GetEnrollno
+            {
+                get { return enrollno; }
+                set { enrollno = value; }
+            }
+
+
+
+        }
+
+
         public static void Main(string[] args)
         {
             //Console.WriteLine("1.");
@@ -105,8 +145,25 @@ namespace ConsoleApp1
             //int sub = substraction(10, 20);
             //Console.WriteLine(sub);
 
+            //A a = new A();
+            //a.setFname("Tanna Sir (method)");
+            //string m = a.getFname();
+            //Console.WriteLine(m);
 
-            
+            //a.FirstName = "Tanna Sir (property)";
+            //string p = a.FirstName;
+            //Console.WriteLine(p);
+
+            Students s = new Students();
+            s.setenrollno("1");
+            s.setFname("ron");
+            Console.WriteLine(s.getenrolno());
+            Console.WriteLine(s.getname());
+
+            s.GetName = "mon";
+            s.GetEnrollno = "2";
+            Console.WriteLine(s.GetEnrollno);
+            Console.WriteLine(s.GetName);
 
         }
     }
