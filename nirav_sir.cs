@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Linq.Expressions;
@@ -199,7 +200,64 @@ namespace ConsoleApp1
 
     //}
 
+    public class Property_demo
+    {
+        int x;
+        int y;
 
+        public Property_demo (int x, int y)
+        {
+            this.y = y;
+            this.x = x;
+        }
+        //this is read-write property
+
+        public int X
+        {
+
+            get { return x; } //read 
+            set { x = value; } //write 
+        }
+        public int Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
+
+        //this is read only property
+        public int show_x
+        {
+            get { return x; } 
+        }
+
+        public int show_y
+        {
+            get { return y; } //read only
+        }
+
+        //this is write only property
+
+        public int new_x
+        {
+            set { x = value; } //write only
+        }
+        public int new_y
+        {
+            set { y = value; } //write only
+        }
+
+        //this is auto implemented property
+        public int xx
+        {
+            get; set; // auto implementing
+        }
+
+        public int yy
+        {
+            get; set; // auto implementing
+        }
+
+    }
 
 
     internal class nirav_sir
@@ -555,8 +613,12 @@ namespace ConsoleApp1
             //emp.getempdata(eid, ename, esalary);
             //emp.ShowEmployeeDetails();
 
-
-
+            Property_demo pp = new Property_demo(100,200);
+            pp.new_x = 50;
+            Console.WriteLine(pp.X);
+            pp.new_y = 150;
+            Console.WriteLine(pp.Y);
+            Console.WriteLine(pp.X + pp.Y);
 
 
 
