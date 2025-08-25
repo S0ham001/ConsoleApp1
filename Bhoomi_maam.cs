@@ -161,18 +161,20 @@ namespace ConsoleApp1
 
 
             //array built in functions
-            int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            Console.WriteLine("Array Length: " + a.Length);
-            Console.WriteLine("Array Max: " + a.Max());
-            Console.WriteLine("Array Min: " + a.Min());
-            Console.WriteLine("Array Sum: " + a.Sum());
-            Console.WriteLine("Array Average: " + a.Average());
-            Console.WriteLine("Array Reverse: " + string.Join(", ", a.Reverse()));
-            a.Append(11);
-            foreach (var item in a)
-            {
-                Console.Write(item + ", ");
-            }
+            //int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //Console.WriteLine("Array Length: " + a.Length);
+            //Console.WriteLine("Array Max: " + a.Max());
+            //Console.WriteLine("Array Min: " + a.Min());
+            //Console.WriteLine("Array Sum: " + a.Sum());
+            //Console.WriteLine("Array Average: " + a.Average());
+            //Console.WriteLine("Array Reverse: " + string.Join(", ", a.Reverse()));
+            //a.Append(11);
+            //foreach (var item in a)
+            //{
+            //    Console.Write(item + ", ");
+            //}
+
+
 
             
 

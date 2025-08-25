@@ -173,31 +173,31 @@ namespace ConsoleApp1
     //    }
     //}
 
-    public class Employees
-    {
-        private int empId;
-        private string empName;
-        private int empSalary;
+    //public class Employees
+    //{
+    //    private int empId;
+    //    private string empName;
+    //    private int empSalary;
 
-        public Employees()
-        {
+    //    public Employees()
+    //    {
 
-        }
-        public void getempdata(int id, string name, int salary)
-        {
-            empId = id;
-            empName = name;
-            empSalary = salary;
+    //    }
+    //    public void getempdata(int id, string name, int salary)
+    //    {
+    //        empId = id;
+    //        empName = name;
+    //        empSalary = salary;
 
-        }
-        public void ShowEmployeeDetails()
-        {
-            Console.WriteLine($"Employee ID: {empId}");
-            Console.WriteLine($"Employee Name: {empName}");
-            Console.WriteLine($"Employee Salary: {empSalary}");
-        }
+    //    }
+    //    public void ShowEmployeeDetails()
+    //    {
+    //        Console.WriteLine($"Employee ID: {empId}");
+    //        Console.WriteLine($"Employee Name: {empName}");
+    //        Console.WriteLine($"Employee Salary: {empSalary}");
+    //    }
 
-    }
+    //}
 
 
 
@@ -547,13 +547,14 @@ namespace ConsoleApp1
             //}
 
 
-            int eid = Convert.ToInt32(args[0]);
-            string ename = args[1];
-            int esalary = Convert.ToInt32(args[2]);
+            //int eid = Convert.ToInt32(args[0]);
+            //string ename = args[1];
+            //int esalary = Convert.ToInt32(args[2]);
 
-            Employees emp = new Employees();
-            emp.getempdata(eid, ename, esalary);
-            emp.ShowEmployeeDetails();
+            //Employees emp = new Employees();
+            //emp.getempdata(eid, ename, esalary);
+            //emp.ShowEmployeeDetails();
+
 
 
 
