@@ -1,0 +1,16 @@
+properties in C#:
+
+- to access private members of class from outside
+- encapsulation - private
+=> special methods -> accessors
+
+- intermediate - only to transfer the data
+set property: is used to set the values
+get property: is used to retrieve the values
+
+Types:
+-> read-write property
+-> read only property
+-> write only property
+-> auto implemented property
+
