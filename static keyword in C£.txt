@@ -1,0 +1,19 @@
+static keyword in C£:
+
+- variable (data members)
+- methods
+- constructors
+- class
+
+static members (variable or method) can be accessible by using class name no need any object 
+
+class demo 
+{
+	int x;
+	static int y;
+}
+
+here "x" is non-static => for each object x has separate memory, store different values for each object
+
+"y" is static => for whole class memory is allocated to "y", can store common value for each object
+

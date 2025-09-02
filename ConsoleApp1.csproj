@@ -46,6 +46,8 @@
     <Compile Include="Bhoomi_maam.cs" />
     <Compile Include="cal.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="books.cs" />
+    <Compile Include="stu.cs" />
     <Compile Include="emp.cs" />
     <Compile Include="static_keyword.cs" />
     <Compile Include="nirav_sir.cs" />

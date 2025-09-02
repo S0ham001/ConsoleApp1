@@ -1,0 +1,26 @@
+class (tree):
+	leaf
+	roots
+	trunk
+	branches
+	fruits
+
+class (table):
+	no. of lag
+	material
+	length
+	width
+
+class (computer):
+	hardware
+	OS
+	software
+	
+class (pen):
+	company
+	colour
+	type
+
+class (electronic devices):
+	uses AC current
+	
